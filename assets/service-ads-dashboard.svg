@@ -1,0 +1,24 @@
+<svg width="560" height="420" viewBox="0 0 560 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 176) rotate(90) scale(240)">
+      <stop stop-color="#77d8ff" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#020811" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="55" y="54" width="460" height="316" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="30" flood-color="#000814" flood-opacity=".35"/>
+    </filter>
+  </defs>
+  <rect width="560" height="420" fill="url(#g)"/>
+  <g filter="url(#shadow)">
+    <rect x="92" y="96" width="292" height="206" rx="22" fill="#07111f" stroke="#dcefff" stroke-opacity=".14"/>
+    <rect x="116" y="124" width="104" height="54" rx="14" fill="#102438"/>
+    <rect x="236" y="124" width="124" height="54" rx="14" fill="#0b2634"/>
+    <path d="M124 250C155 210 187 232 212 204C235 178 268 204 302 166C323 142 346 150 362 136" stroke="#6ecbff" stroke-opacity=".45" stroke-width="4"/>
+    <rect x="116" y="212" width="38" height="58" rx="8" fill="#6ecbff" fill-opacity=".16"/>
+    <rect x="166" y="198" width="38" height="72" rx="8" fill="#dcefff" fill-opacity=".12"/>
+    <rect x="216" y="178" width="38" height="92" rx="8" fill="#6ecbff" fill-opacity=".22"/>
+    <rect x="402" y="142" width="78" height="158" rx="24" fill="#07111f" stroke="#dcefff" stroke-opacity=".16"/>
+    <rect x="416" y="170" width="50" height="78" rx="12" fill="#102438"/>
+    <rect x="420" y="260" width="42" height="8" rx="4" fill="#6ecbff" fill-opacity=".24"/>
+  </g>
+</svg>
