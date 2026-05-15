@@ -5948,3 +5948,94 @@ mobile carousel edges */
   }
 }
 
+/* Final polish: real case reads as a premium black showcase */
+.services-page .portfolio-slide.real-project {
+  grid-template-columns: minmax(260px, 0.9fr) minmax(280px, 0.7fr) !important;
+  min-height: 420px !important;
+  padding: clamp(18px, 3vw, 28px) !important;
+  overflow: hidden !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(0, 113, 227, 0.22), transparent 30%),
+    linear-gradient(135deg, #05070b 0%, #0b0f16 62%, #000000 100%) !important;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34) !important;
+}
+
+.services-page .portfolio-slide.real-project::after {
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.12), transparent 38%) !important;
+  opacity: 0.7 !important;
+}
+
+.services-page .portfolio-slide.real-project .project-preview,
+.services-page .portfolio-slide.real-project .clean-preview {
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+.services-page .portfolio-slide.real-project .portfolio-photo {
+  width: min(100%, 610px) !important;
+  min-height: 0 !important;
+  max-height: 330px !important;
+  aspect-ratio: 16 / 9 !important;
+  border-radius: 18px !important;
+  background: #05070b !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.44) !important;
+}
+
+.services-page .portfolio-slide.real-project .portfolio-photo img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  padding: 6px !important;
+  background: #05070b !important;
+}
+
+.services-page .portfolio-slide.real-project > div:last-child,
+.services-page .portfolio-slide.real-project span {
+  color: #ffffff !important;
+}
+
+.services-page .portfolio-slide.real-project small {
+  color: #8cc7ff !important;
+}
+
+.services-page .portfolio-slide.real-project p {
+  color: rgba(255, 255, 255, 0.76) !important;
+}
+
+.services-page .future-project-note {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(0, 113, 227, 0.2), transparent 32%),
+    #05070b !important;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.28) !important;
+}
+
+.services-page .future-project-note span {
+  color: #8cc7ff !important;
+}
+
+.services-page .future-project-note p {
+  color: rgba(255, 255, 255, 0.72) !important;
+}
+
+.services-page .site-footer .footer-brand-head,
+.services-page .site-footer .footer-brand-head > span:last-child {
+  color: #ffffff !important;
+}
+
+@media (max-width: 760px) {
+.services-page .portfolio-slide.real-project {
+    grid-template-columns: 1fr !important;
+    min-height: 0 !important;
+    padding: 18px !important;
+    gap: 18px !important;
+  }
+
+  .services-page .portfolio-slide.real-project .portfolio-photo {
+    width: 100% !important;
+    max-height: 240px !important;
+    border-radius: 14px !important;
+  }
+}

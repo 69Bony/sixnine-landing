@@ -8,11 +8,11 @@ Landing page oficial de SixNine Systems.
 - JavaScript vanilla
 
 ## Estructura
-- `index.html`: pagina principal
+- `index.html`: página principal
 - `styles.css`: estilos de la landing
 - `script.js`: interacciones de la landing
 - `translations.js`: textos multiidioma
-- `assets/`: logos, favicons e imagenes usadas por la landing
+- `assets/`: logos, favicons e imágenes usadas por la landing
 
 ## Desarrollo local
 Abri `index.html` en el navegador o ejecuta:

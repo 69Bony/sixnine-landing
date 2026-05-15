@@ -118,7 +118,7 @@ contactForm?.addEventListener("submit", async (event) => {
     SixNineStore.saveLandingLeads([lead, ...SixNineStore.getLandingLeads()]);
     contactForm.reset();
     if (contactMessage) {
-      contactMessage.textContent = "Consulta enviada con exito. Te responderemos para revisar el proyecto y definir el siguiente paso.";
+      contactMessage.textContent = "Consulta enviada con éxito. Te responderemos para revisar el proyecto y definir el siguiente paso.";
     }
   } catch (error) {
     console.error("Error al enviar el formulario:", error);
