@@ -1,0 +1,12 @@
+tienda.html
+tienda.js
+store-data.js
+add_i18n.py
+crop_favicon.py
+update_css.py
+export-landing.ps1
+export-landing.bat
+do_export.py
+test-results/
+.DS_Store
+Thumbs.db
