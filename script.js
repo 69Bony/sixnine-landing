@@ -1,4 +1,4 @@
-// Minimal lead storage (self-contained, no store-data.js needed)
+// Minimal lead storage for landing contact forms.
 const SixNineStore = {
   uid: (prefix = 'ID') => `${prefix}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
   getLandingLeads: () => JSON.parse(localStorage.getItem('sixnine-leads') || '[]'),

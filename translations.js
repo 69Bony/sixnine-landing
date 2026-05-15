@@ -32,7 +32,7 @@ const translations = {
     "auto-title": "Sistemas que trabajan por tu negocio todos los dias.",
     "auto-text": "Creamos automatizaciones para captacion de leads, ventas, soporte, reservas, publicaciones, seguimiento de clientes y sincronizacion de datos.",
     "auto-1-title": "WhatsApp Automatizado",
-    "auto-1-desc": "Chatbots con IA, carritos abandonados, citas automaticas y miles de conversaciones bajo control.",
+    "auto-1-desc": "Chatbots con IA, seguimiento de consultas, citas automaticas y conversaciones bajo control.",
     "auto-2-title": "Instagram Automatizado",
     "auto-2-desc": "Auto-respuestas a comentarios, DMs inteligentes, lead magnets, menus y calificacion de leads.",
     "auto-3-title": "Infraestructura Bots",

@@ -1,22 +1,22 @@
-# SixNine Codex - Landing Page
+# SixNine Systems Landing Page
 
 Landing page oficial de SixNine Systems.
 
-## Tecnologias
-- HTML5 / CSS3 (Vanilla)
-- - JavaScript ES6+
-  - - i18n con translations.js
-   
-    - ## Estructura
-    - - index.html - Pagina principal
-      - - styles.css - Estilos globales
-        - - script.js - Logica de la landing
-          - - translations.js - Textos multiidioma
-            - - assets/ - Imagenes, logos y favicons
-             
-              - ## Desarrollo local
-              - Abri index.html en el navegador, o corre:
-              - \`\`\`bash
-              - npx serve .
-              - \`\`\`
-              - 
+## Tecnologia
+- HTML5
+- CSS3
+- JavaScript vanilla
+
+## Estructura
+- `index.html`: pagina principal
+- `styles.css`: estilos de la landing
+- `script.js`: interacciones de la landing
+- `translations.js`: textos multiidioma
+- `assets/`: logos, favicons e imagenes usadas por la landing
+
+## Desarrollo local
+Abri `index.html` en el navegador o ejecuta:
+
+```bash
+npx serve .
+```
