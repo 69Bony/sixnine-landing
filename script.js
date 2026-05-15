@@ -77,15 +77,29 @@ expandableCards.forEach((card) => {
 
 const contactForm = document.querySelector("[data-contact-form]");
 const contactMessage = document.querySelector("[data-contact-message]");
+const googleSheetURL = "https://script.google.com/macros/s/AKfycbxYexd7sD_3Mvh4QUX_3JcqAVSyUfALT5lfp_HOh69Kcpqhcz9YyYZW0sjNr0gioeMj/exec";
 
-contactForm?.addEventListener("submit", (event) => {
+contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  const data = Object.fromEntries(new FormData(contactForm));
+  const submitButton = contactForm.querySelector('button[type="submit"]');
+  const originalButtonText = submitButton?.textContent || "Enviar consulta";
+  const formData = new FormData(contactForm);
+  const data = Object.fromEntries(formData);
+  const searchParams = new URLSearchParams(formData);
+
+  if (submitButton) {
+    submitButton.disabled = true;
+    submitButton.textContent = "Enviando...";
+  }
+  if (contactMessage) {
+    contactMessage.textContent = "";
+  }
+
   const lead = {
     id: SixNineStore.uid("LEAD"),
     createdAt: new Date().toISOString(),
     name: data.nombre,
-    email: data.email,
+    email: data.correo,
     phone: "",
     service: data.servicio,
     message: data.mensaje,
@@ -93,10 +107,29 @@ contactForm?.addEventListener("submit", (event) => {
     status: "nuevo",
     estimatedValue: 0,
   };
-  SixNineStore.saveLandingLeads([lead, ...SixNineStore.getLandingLeads()]);
-  contactForm.reset();
-  if (contactMessage) {
-    contactMessage.textContent = "Consulta enviada. Te responderemos para revisar el proyecto y definir el siguiente paso.";
+
+  try {
+    await fetch(googleSheetURL, {
+      method: "POST",
+      body: searchParams,
+      mode: "no-cors",
+    });
+
+    SixNineStore.saveLandingLeads([lead, ...SixNineStore.getLandingLeads()]);
+    contactForm.reset();
+    if (contactMessage) {
+      contactMessage.textContent = "Consulta enviada con exito. Te responderemos para revisar el proyecto y definir el siguiente paso.";
+    }
+  } catch (error) {
+    console.error("Error al enviar el formulario:", error);
+    if (contactMessage) {
+      contactMessage.textContent = "Hubo un error al enviar la consulta. Intenta nuevamente o escribinos por WhatsApp.";
+    }
+  } finally {
+    if (submitButton) {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
   }
 });
 
